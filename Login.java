@@ -15,7 +15,7 @@ public class Login extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new GridBagLayout());
 
-        // 🎨 Colors
+        // Colors
         Color bg = new Color(18, 18, 18);
         Color card = new Color(30, 30, 30);
         Color accent = new Color(0, 173, 181);
@@ -23,7 +23,7 @@ public class Login extends JFrame {
 
         getContentPane().setBackground(bg);
 
-        // 🔳 Card Panel
+        // Card Panel
         JPanel panel = new JPanel();
         panel.setPreferredSize(new Dimension(300, 260));
         panel.setBackground(card);
@@ -33,7 +33,7 @@ public class Login extends JFrame {
         gbc.insets = new Insets(10, 10, 10, 10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // 🔹 Title
+        // Title
         JLabel title = new JLabel("TradeZilla", JLabel.CENTER);
         title.setForeground(accent);
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
@@ -42,7 +42,7 @@ public class Login extends JFrame {
         gbc.gridy = 0;
         panel.add(title, gbc);
 
-        // 🔹 Subtitle
+        // Subtitle
         JLabel subtitle = new JLabel("Welcome Back", JLabel.CENTER);
         subtitle.setForeground(text);
         subtitle.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -50,21 +50,21 @@ public class Login extends JFrame {
         gbc.gridy = 1;
         panel.add(subtitle, gbc);
 
-        // 🔹 Username
+        // Username
         usernameField = new JTextField();
         styleField(usernameField, text, card);
 
         gbc.gridy = 2;
         panel.add(usernameField, gbc);
 
-        // 🔹 Password
+        // Password
         passwordField = new JPasswordField();
         styleField(passwordField, text, card);
 
         gbc.gridy = 3;
         panel.add(passwordField, gbc);
 
-        // 🔹 Login Button
+        // Login Button
         JButton loginBtn = new JButton("Login");
         loginBtn.setBackground(accent);
         loginBtn.setForeground(Color.BLACK);
@@ -82,7 +82,7 @@ public class Login extends JFrame {
         setVisible(true);
     }
 
-    // 🎨 Input styling
+    // Input styling
     void styleField(JTextField field, Color text, Color bg) {
         field.setBackground(bg);
         field.setForeground(text);
@@ -99,9 +99,9 @@ public class Login extends JFrame {
     void login() {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword());
+
         // username.toLowerCase();
         // System.out.println(username);
-   
 
         if (username.equals("weekday traders") && password.equals("1234")) {
             JOptionPane.showMessageDialog(this, "Welcome, " + username + "!");
