@@ -99,8 +99,8 @@ public class Login extends JFrame {
     void login() {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword());
-        // username.toLowerCase();
-        // System.out.println(username);
+        username.toLowerCase();
+        System.out.println(username);
    
 
         if (username.equals("weekday traders") && password.equals("1234")) {
