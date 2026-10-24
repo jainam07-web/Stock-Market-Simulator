@@ -101,10 +101,11 @@ public class Login extends JFrame {
         String password = new String(passwordField.getPassword());
         username.toLowerCase();
         System.out.println(username);
+        
    
 
         if (username.equals("weekday traders") && password.equals("1234")) {
-            JOptionPane.showMessageDialog(this, "Welcome, " + username + "!");
+            JOptionPane.showMessageDialog(this, "Welcomee, " + username + "!");
             dispose();
             new Stockmarket(username);
         } else {
